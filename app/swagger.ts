@@ -4,11 +4,10 @@ export default {
     version: '1.0.0'
   },
   host: 'localhost:3000',
-  basePath: '/api/v1',
   schemes: ['http'],
   produces: ['application/json'],
   paths: {
-    '/dog': {
+    '/dogs': {
       get: {
         tags: ['dog'],
         summary: 'Returns all the dogs in the database',
@@ -22,7 +21,7 @@ export default {
         }
       }
     },
-    '/dog/:dogName': {
+    '/dogs/:dogName': {
       get: {
         tags: ['dog'],
         summary: 'Finds a dog with the given dog name',
