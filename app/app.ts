@@ -1,7 +1,7 @@
 import express = require('express');
 import swaggerUi = require('swagger-ui-express');
 import bodyParser = require('body-parser');
-import swaggerDocument from './swagger';
+import swaggerDocument = require('./swagger.json');
 import DogRouter from './routes/dog';
 
 const app: express.Application = express();

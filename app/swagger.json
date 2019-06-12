@@ -1,0 +1,46 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Dogs Api",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Kevin Rodríguez",
+      "email": "_@kevinrodriguez.io",
+      "url": "https://kevinrodriguez.io/"
+    }
+  },
+  "tags": [
+    {
+      "name": "Metadata",
+      "description": "Metadata related requests"
+    },
+    {
+      "name": "Dog",
+      "description": "Dog api"
+    }
+  ],
+  "schemes": ["http"],
+  "produces": ["application/json"],
+  "paths": {
+    "/dogs/{id}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "id",
+            "description": "Dog name",
+            "in": "path",
+            "type": "string"
+          }
+        ],
+        "tags": ["Dog"],
+        "summary": "Returns all the dogs in the database",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
